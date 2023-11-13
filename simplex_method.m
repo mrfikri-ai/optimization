@@ -1,4 +1,8 @@
 function [xB, optimalSolution] = simplex_method(A, b, c)
+
+% This code applies 8 step of simplex method
+% Check carefully the comment
+
     % Step 1: Initialize the basis and null parts
     B = A(:, 1:size(A, 1)); % Assuming the first n columns form the initial basis
     N = A(:, size(A, 1) + 1:end);
