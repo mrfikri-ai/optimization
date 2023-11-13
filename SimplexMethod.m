@@ -1,5 +1,7 @@
 function tab = SimplexMethod(A,b,c,debug) 
-% This function implments the simplex matrix algorithm. 
+% This applies simplex method based on two-phase
+
+% This function implements the simplex matrix algorithm. 
 % It accepts A_eq and b_eq and c as defined in standard 
 % documentation and generates all the simplex tableaus, and 
 % returns the final tableau which the user can read from it the 
@@ -11,16 +13,16 @@ function tab = SimplexMethod(A,b,c,debug)
 % The input is 
 % 
 % A: This is the Ax=b matrix. This is for simplex standard 
-%   form only. The caller must convert all inequalites to 
-%   equalities first by using slack and suprluse variables. This 
-%   is what is called the Aeq matrix in Matlab documenation. 
+%   form only. The caller must convert all inequalities to 
+%   equalities first by using Slack and surplus variables. This 
+%   is what is called the Aeq matrix in Matlab documentation. 
 %   This function does not support Ax<b form. A has to be in 
 %   standard form 
 % 
-% b: Vector. This is the right hand side of Ax=b. 
+% b: Vector. This is the right-hand side of Ax=b. 
 % 
 % c: Vector. This is from minimize  J(x) = c'x. As defined in 
-%   standard Matlab documentations. 
+%   standard Matlab documentation. 
 % 
 % debug: flag. Set to true to see lots of internal steps. 
 % 
